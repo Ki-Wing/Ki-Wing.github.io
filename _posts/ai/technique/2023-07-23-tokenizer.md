@@ -7,9 +7,9 @@ tags: [technique]
 pin: false
 ---
 
-
 <img src="https://Ki-Wing.github.io/assets/img/ai_paper/token/hug.png" width="100%"/>
 
+#### [Tokenizer 정리-1](https://ki-wing.github.io/posts/tokenizer/)
 #### [Tokenizer 정리-2](https://ki-wing.github.io/posts/tokenizer2/)
 #### [Tokenizer 정리-3](https://ki-wing.github.io/posts/tokenizer3/)
 
@@ -89,8 +89,7 @@ print(bpe_codes)
 
 <br>
 
-<details>
-<summary>OOV 대처하기</summary>
+## OOV 대처하기
 
 ```python
 def get_pairs(word):
@@ -150,24 +149,16 @@ if word[-1] == '</w>':
 elif word[-1].endswith('</w>'):
     word = word[:-1] + (word[-1].replace('</w>',''),)   # 토큰 제거
 return word
+
 ```
 
-- 결과
+- 작동 결과
 
-```python
+```
 encode("bun")
+
 ```
 <img src="https://github.com/Ki-Wing/Ki-Wing.github.io/assets/92567807/0bd8dd22-1677-4886-a792-6cc1f5a0b5e0" width="100%"/>
-</details>
-
-
-
-
-
-
-
-
-
 
 [nodejs]: https://nodejs.org/
 [starter]: https://github.com/cotes2020/chirpy-starter
