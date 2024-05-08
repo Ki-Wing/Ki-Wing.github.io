@@ -7,7 +7,7 @@ tags: [technique]
 pin: false
 ---
 
-<img src="https://Ki-Wing.github.io/assets/img/ai_paper/token/hug.png" width="100%"/>
+<img src="https://Ki-Wing.github.io/assets/img/ai_paper/token/hug.png" alt="1" width="100%"/>
 
 #### [Tokenizer 정리-1](https://ki-wing.github.io/posts/tokenizer/)
 #### [Tokenizer 정리-2](https://ki-wing.github.io/posts/tokenizer2/)
@@ -16,7 +16,7 @@ pin: false
 <br>
 
 ## Tokenizer 정리
-<img src="https://Ki-Wing.github.io/assets/img/ai_paper/token/2.png" width="100%"/>
+<img src="https://Ki-Wing.github.io/assets/img/ai_paper/token/2.png" alt="2" width="100%"/>
 
 <br>
 
@@ -26,7 +26,7 @@ pin: false
 - Bottom-up approach that gradually creates word vocabulary in character units
 - Assuming that sentences are pre-tokenized by default
 
-<img src="https://Ki-Wing.github.io/assets/img/ai_paper/token/1.png" width="100%"/>
+<img src="https://Ki-Wing.github.io/assets/img/ai_paper/token/1.png" alt="3" width="100%"/>
 
 ```python
 import re, collections
@@ -77,7 +77,7 @@ for i in range(num_merges):
     print("dictionary: {}".format(dictionary))
 ```
 
-<img src="https://github.com/Ki-Wing/Ki-Wing.github.io/assets/92567807/f38a5c96-3e9a-4c18-963f-b0e1e0356d88" width="100%"/>
+<img src="https://github.com/Ki-Wing/Ki-Wing.github.io/assets/92567807/f38a5c96-3e9a-4c18-963f-b0e1e0356d88" alt="1" width="100%"/>
 
 - 결과
 
@@ -158,7 +158,7 @@ return word
 encode("bun")
 
 ```
-<img src="https://github.com/Ki-Wing/Ki-Wing.github.io/assets/92567807/0bd8dd22-1677-4886-a792-6cc1f5a0b5e0" width="100%"/>
+<img src="https://github.com/Ki-Wing/Ki-Wing.github.io/assets/92567807/0bd8dd22-1677-4886-a792-6cc1f5a0b5e0" alt="1"  width="100%"/>
 
 [nodejs]: https://nodejs.org/
 [starter]: https://github.com/cotes2020/chirpy-starter
