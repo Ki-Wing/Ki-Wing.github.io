@@ -1,5 +1,5 @@
 ---
-title: 배열 (Array)
+title: 배열-1 (ArrayList)
 author: kiwing
 date: 2024-05-20 22:36:08 +0800
 categories: [JAVA, Data Structure]
