@@ -97,9 +97,6 @@ list.addAll(list2); // 리스트 병합
 | 성능 (읽기/쓰기)        | 읽기 빠름 (`O(1)`), 쓰기 빠름 (`O(1)`), 요소 추가/삭제 느림 (전체 배열을 이동해야 함, `O(n)`)     | 읽기 빠름 (`O(1)`), 쓰기 빠름 (`O(1)`), 요소 추가/삭제 빠름 (`O(n)`), 끝에서 추가 시 빠름 (`O(1)`) |
 
 
-
-
-
 [nodejs]: https://nodejs.org/
 [starter]: https://github.com/cotes2020/chirpy-starter
 [pages-workflow-src]: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow
