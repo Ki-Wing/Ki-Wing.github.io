@@ -1,0 +1,43 @@
+name: Ruby Build Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # GitHub 호스팅된 러너 사용
+
+    steps:
+      # 1. 코드 체크아웃
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Ruby 설치 (self-hosted 대비)
+      - name: Install Ruby (self-hosted only)
+        if: runner.os == 'Linux' && !startsWith(runner.name, 'Hosted')
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
+          git clone https://github.com/rbenv/ruby-build.git ~/.ruby-build
+          sudo ~/.ruby-build/install.sh
+          ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+          touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
+        env:
+          PATH: "/opt/hostedtoolcache/Ruby/3.1.4/x64/bin:$PATH"
+
+      # 3. Ruby 설정
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.4'
+          bundler-cache: true
+
+      # 4. 의존성 설치
+      - name: Install dependencies
+        run: bundle install
+
+      # 5. 테스트 실행
+      - name: Run tests
+        run: bundle exec rake test
